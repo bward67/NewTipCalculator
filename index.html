@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>
+      Out with friends,<br />
+      having fun ...
+    </h1>
+    <p class="header-small">don't want to get stuck with the bill?</p>
+    <div class="main-container">
+      <div class="container-left">
+        <div class="bill-total">
+          <label for=""><p>Bill Total</p></label>
+          <input type="number" placeholder="0" data-bill-total />
+          <p class="dollar-sign">Rand</p>
+        </div>
+
+        <div class="no-of-people">
+          <div class="no-of-people-line">
+            <p>Number of People</p>
+            <div class="error">Cannot be zero</div>
+          </div>
+
+          <input
+            class="no-of-people-input"
+            data-no-of-people
+            type="number"
+            placeholder="0"
+          />
+        </div>
+
+        <div class="select-tip">
+          <p>Select Tip %</p>
+          <div class="btn-container">
+            <button class="button btn-dark">
+              <span class="five-perc" data-value="5">5</span>%
+            </button>
+            <button class="button btn-dark">
+              <span class="ten-perc" data-value="10">10</span>%
+            </button>
+            <button class="button btn-dark">
+              <span class="fifteen-perc" data-value="15">15</span>%
+            </button>
+            <button class="button btn-dark">
+              <span class="twenty-five-perc" data-value="25">25</span>%
+            </button>
+            <button class="button btn-dark">
+              <span class="fifty-perc" data-value="50">50</span>%
+            </button>
+            <!--This must have an input and placeholder-->
+            <input
+              type="number"
+              data-value=""
+              placeholder="Custom"
+              data-bill-total
+              class="button custom"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="container-right">
+        <div class="container-right-top">
+          <div class="tip-amount">
+            <p class="white">Tip Amount</p>
+            <small>per person</small>
+          </div>
+          <div class="tip-amount">
+            <h2>R <span id="tip-amount">0.00</span></h2>
+          </div>
+        </div>
+
+        <div class="container-right-middle">
+          <div class="total">
+            <p class="white">TOTAL</p>
+            <small>per person</small>
+          </div>
+          <div class="total">
+            <h2>R <span id="total">0.00</span></h2>
+          </div>
+        </div>
+
+        <div class="container-right-bottom">
+          <div class="total">
+            <p class="white">TOTAL</p>
+            <small>per couple</small>
+          </div>
+          <div class="total">
+            <h2>R <span id="total-per-couple">0.00</span></h2>
+          </div>
+        </div>
+
+        <button class="button btn-light reset-btn">RESET</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
